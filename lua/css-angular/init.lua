@@ -9,6 +9,8 @@ local config = require("css-angular.config").config
 
 local source_name = "css-angular"
 
+vim.print("inti css")
+
 ---@type string[]
 local enable_on_dto = {}
 
