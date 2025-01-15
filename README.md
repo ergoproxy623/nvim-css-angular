@@ -31,14 +31,14 @@ return require("lazy").setup({
     {
         "hrsh7th/nvim-cmp",
         dependencies = {
-            "Jezda1337/nvim-html-css" -- add it as dependencies of `nvim-cmp` or standalone plugin
+            "ergoproxy623/nvim-css-angular" -- add it as dependencies of `nvim-cmp` or standalone plugin
         },
         opts = {
             sources = {
                 {
-                    name = "html-css",
+                    name = "css-angular",
                     option = {
-                        enable_on = { "html" }, -- html is enabled by default
+                        enable_on = { "html", "angularhtml" }, -- html is enabled by default
                         notify = false,
                         documentation = {
                             auto_show = true, -- show documentation on select
