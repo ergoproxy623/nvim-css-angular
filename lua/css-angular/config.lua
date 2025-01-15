@@ -8,6 +8,7 @@ M.default = {
 		auto_show = true,
 	},
 	style_sheets = {},
+	style_extention = "css",
 }
 
 M.config = {}

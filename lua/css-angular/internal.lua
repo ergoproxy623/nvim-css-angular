@@ -4,9 +4,11 @@ local ts = vim.treesitter
 local store = require("css-angular.store")
 local query = require("css-angular.querys").internal_selectors
 local cmp = require("cmp")
+local config = require("css-angular.config").config
 
 ---@param bufnr number
 M.init = function(bufnr, file_name)
+	vim.print(file_name)
 	local selectors = store.get(bufnr, "selectors") or {
 		classes = {},
 		ids = {},
@@ -23,10 +25,10 @@ M.init = function(bufnr, file_name)
 		seen_ids[id.label] = true
 	end
 
-	local parser = ts.get_parser(bufnr, "css")
+	local parser = ts.get_parser(bufnr, config.style_extention)
 	local parse = parser:parse()
 	local root = parse[1]:root()
-	local qp = ts.query.parse("css", query)
+	local qp = ts.query.parse(config.style_extention, query)
 
 	for _, match, _ in qp:iter_matches(root, bufnr, 0, -1, { all = true }) do
 		for _, nodes in pairs(match) do
