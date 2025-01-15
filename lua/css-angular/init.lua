@@ -31,6 +31,7 @@ function M:setup()
 	vim.api.nvim_create_autocmd({ "BufEnter", "BufWritePre", "WinEnter" }, {
 		pattern = enable_on_dto,
 		callback = function(event)
+			vim.print(event.file)
 			local hrefs = extractor.href(config.style_sheets)
 			externals.init(event.buf, hrefs)
 			internal.init(event.buf, event.file)
