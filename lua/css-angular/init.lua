@@ -16,6 +16,7 @@ local enable_on_dto = {}
 
 if config.enable_on ~= nil then
   for _, ext in pairs(config.enable_on) do
+  	vim.print(ext)
     table.insert(enable_on_dto, "*." .. ext)
   end
 end
