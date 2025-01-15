@@ -1,8 +1,8 @@
 local M = {}
 
 local ts = vim.treesitter
-local store = require("html-css.store")
-local query = require("html-css.querys").internal_selectors
+local store = require("css-angular.store")
+local query = require("css-angular.querys").internal_selectors
 local cmp = require("cmp")
 
 ---@param bufnr number

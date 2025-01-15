@@ -1,6 +1,6 @@
 local M = {}
 M.check = function()
-	vim.health.start("nvim-html-css report")
+	vim.health.start("nvim-css-angular report")
 	if vim.fn.executable("curl") == 0 then
 		vim.health.error("curl not found on path")
 		return

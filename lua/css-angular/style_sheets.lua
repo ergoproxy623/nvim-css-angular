@@ -1,8 +1,8 @@
 local M = {}
 
-local store = require("html-css.store")
-local extractor = require("html-css.extractor")
-local fetcher = require("html-css.fetcher")
+local store = require("css-angular.store")
+local extractor = require("css-angular.extractor")
+local fetcher = require("css-angular.fetcher")
 
 ---@type fun(ctx: Ctx, cdn: string)
 local function extractDataFromLinks(ctx, cdn)

@@ -1,4 +1,4 @@
-local config = require("html-css.config")
+local config = require("css-angular.config")
 ---@type fun(url: string, opts: any[], cb: fun(ctx: Ctx))
 return function(url, opts, cb)
 	opts = opts or {}

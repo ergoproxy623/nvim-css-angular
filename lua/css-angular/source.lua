@@ -1,4 +1,4 @@
-local store = require("html-css.store")
+local store = require("css-angular.store")
 ---@type Source
 local source = {
 	new = function(self)
@@ -13,10 +13,10 @@ local source = {
 
 local ts = vim.treesitter
 local cmp_config = require("cmp.config")
-local config = require("html-css.config")
-local utils = require("html-css.utils")
+local config = require("css-angular.config")
+local utils = require("css-angular.utils")
 
-local source_name = "html-css"
+local source_name = "css-angular"
 
 if cmp_config.get_source_config(source_name) ~= nil then
 	---@type Config

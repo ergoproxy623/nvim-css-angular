@@ -1,13 +1,13 @@
 local M = {}
 
-local source = require("html-css.source")
-local externals = require("html-css.externals")
-local extractor = require("html-css.extractor")
-local ss = require("html-css.style_sheets")
-local internal = require("html-css.internal")
-local config = require("html-css.config").config
+local source = require("css-angular.source")
+local externals = require("css-angular.externals")
+local extractor = require("css-angular.extractor")
+local ss = require("css-angular.style_sheets")
+local internal = require("css-angular.internal")
+local config = require("css-angular.config").config
 
-local source_name = "html-css-a"
+local source_name = "css-angular"
 
 ---@type string[]
 local enable_on_dto = {}

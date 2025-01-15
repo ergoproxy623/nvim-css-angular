@@ -1,10 +1,10 @@
 local M = {}
 
-local store = require("html-css.store")
-local extractor = require("html-css.extractor")
-local fetcher = require("html-css.fetcher")
-local utils = require("html-css.utils")
-local config = require("html-css.config")
+local store = require("css-angular.store")
+local extractor = require("css-angular.extractor")
+local fetcher = require("css-angular.fetcher")
+local utils = require("css-angular.utils")
+local config = require("css-angular.config")
 
 local function url_exists(url, list)
 	for _, link in ipairs(list) do

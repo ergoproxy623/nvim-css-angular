@@ -1,7 +1,7 @@
 local M = {}
 
 local ts = vim.treesitter
-local q = require("html-css.querys")
+local q = require("css-angular.querys")
 local cmp = require("cmp")
 
 ---@type fun(provider: string): string | nil
