@@ -30,6 +30,7 @@ M.init = function(bufnr, file_name)
 	local root = parse[1]:root()
 	local qp = ts.query.parse(config.style_extention, query)
 
+	vim.cmd('echoerr "error"')
 	for _, match, _ in qp:iter_matches(root, bufnr, 0, -1, { all = true }) do
 		for _, nodes in pairs(match) do
 			for _, node in ipairs(nodes) do

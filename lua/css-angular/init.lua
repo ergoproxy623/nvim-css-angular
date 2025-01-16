@@ -29,10 +29,11 @@ function M:setup()
 	end
 
 	vim.api.nvim_create_autocmd({ "BufEnter", "BufWritePre", "WinEnter" }, {
+
 		pattern = enable_on_dto,
 		callback = function(event)
-			vim.cmd('echoerr "error"')
 			local hrefs = extractor.href(config.style_sheets)
+	vim.cmd('echoerr "error"')
 			externals.init(event.buf, hrefs)
 			internal.init(event.buf, event.file)
 		end,
